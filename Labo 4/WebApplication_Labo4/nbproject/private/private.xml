@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Data/AMT/Labo%204/WebApplication_Labo4/src/java/ch/heigvd/amt/lab4/services/SensorJdbcDAO.java</file>
+            <file>file:/C:/Data/AMT/Labo%204/WebApplication_Labo4/src/java/ch/heigvd/amt/lab4/controllers/SensorFCServlet.java</file>
+            <file>file:/C:/Data/AMT/Labo%204/WebApplication_Labo4/src/java/ch/heigvd/amt/lab4/model/Sensor.java</file>
+            <file>file:/C:/Data/AMT/Labo%204/WebApplication_Labo4/src/java/ch/heigvd/amt/lab4/controllers/FrontControllerServlet.java</file>
+            <file>file:/C:/Data/AMT/Labo%204/WebApplication_Labo4/src/java/ch/heigvd/amt/lab4/services/SensorDAO.java</file>
+        </group>
+    </open-files>
+</project-private>
