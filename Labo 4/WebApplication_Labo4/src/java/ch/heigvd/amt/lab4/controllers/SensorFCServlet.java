@@ -8,7 +8,6 @@ package ch.heigvd.amt.lab4.controllers;
 import ch.heigvd.amt.lab4.model.Sensor;
 import ch.heigvd.amt.lab4.services.SensorDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -38,7 +37,7 @@ public class SensorFCServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        List<Sensor> listSensor;
+        List<Sensor> sensorList;
         Sensor s;
         
         //TODO http://sensors?action=update&id=334 : ne correspond pas à ce que j'ai fait ? ...
@@ -66,22 +65,19 @@ public class SensorFCServlet extends HttpServlet {
                         sensorDAO.delete(Integer.valueOf(request.getParameter("id")));
                 break;
             case "findbydescription" :
-                        listSensor = sensorDAO.findByDescription(request.getParameter("description"));
-                        for (Sensor sensor : listSensor) {
-                            response.getWriter().println(sensor.getId() + " " + sensor.getType() + " " + sensor.getDescription());
-                        }
+                        sensorList = sensorDAO.findByDescription(request.getParameter("description"));
+                        request.setAttribute("sensorList", sensorList);
+                        request.getRequestDispatcher("WEB-INF/views/sensors.jsp").forward(request, response);
                 break;
             case "findbytype" :
-                        listSensor = sensorDAO.findByType(request.getParameter("type"));
-                        for (Sensor sensor : listSensor) {
-                            response.getWriter().println(sensor.getId() + " " + sensor.getType() + " " + sensor.getDescription());
-                        }
+                        sensorList = sensorDAO.findByType(request.getParameter("type"));
+                        request.setAttribute("sensorList", sensorList);
+                        request.getRequestDispatcher("WEB-INF/views/sensors.jsp").forward(request, response);
                 break;
             case "findall" :
-                        listSensor = sensorDAO.findAll();
-                        for (Sensor sensor : listSensor) {
-                            response.getWriter().println(sensor.getId() + " " + sensor.getType() + " " + sensor.getDescription());
-                        }
+                        sensorList = sensorDAO.findAll();
+                        request.setAttribute("sensorList", sensorList);
+                        request.getRequestDispatcher("WEB-INF/views/sensors.jsp").forward(request, response);
                 break;
         }        
     }
