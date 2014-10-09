@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.heigvd.amt.lab4.services;
+package ch.heigvd.amt.lab5.services;
 
-import ch.heigvd.amt.lab4.model.Sensor;
+import ch.heigvd.amt.lab5.model.Sensor;
 import java.util.List;
 import javax.ejb.Local;
 

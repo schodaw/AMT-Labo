@@ -1,6 +1,6 @@
-package ch.heigvd.amt.lab4.services;
+package ch.heigvd.amt.lab5.services;
 
-import ch.heigvd.amt.lab4.model.Sensor;
+import ch.heigvd.amt.lab5.model.Sensor;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
